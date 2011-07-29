@@ -1,4 +1,4 @@
-# Maintainer: Evangelos Foutras <foutrelis@gmail.com>
+# Maintainer: Evangelos Foutras <evangelos@foutrelis.com>
 # Contributor: Jan "heftig" Steffens <jan.steffens@gmail.com>
 # Contributor: Sebastian Nowicki <sebnow@gmail.com>
 # Contributor: Devin Cofer <ranguvar{AT]archlinux[DOT}us>
