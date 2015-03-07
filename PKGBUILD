@@ -11,7 +11,7 @@
 pkgname=('llvm' 'llvm-libs' 'llvm-ocaml' 'lldb' 'clang' 'clang-analyzer'
          'clang-tools-extra')
 pkgver=3.6.0
-pkgrel=1
+pkgrel=2
 _ocaml_ver=4.02.1
 arch=('i686' 'x86_64')
 url="http://llvm.org/"
@@ -96,6 +96,7 @@ build() {
     --sysconfdir=/etc \
     --enable-shared \
     --enable-libffi \
+    --enable-libedit \
     --enable-targets=all \
     --enable-bindings=ocaml \
     --disable-expensive-checks \
@@ -171,7 +172,7 @@ package_llvm() {
 
 package_llvm-libs() {
   pkgdesc="Low Level Virtual Machine (runtime library)"
-  depends=('gcc-libs' 'zlib' 'libffi' 'ncurses')
+  depends=('gcc-libs' 'zlib' 'libffi' 'libedit' 'ncurses')
 
   install -d "$pkgdir/usr/lib"
   cp -P \
