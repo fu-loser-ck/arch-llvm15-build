@@ -99,7 +99,7 @@ build() {
 
 check() {
   cd "$srcdir/llvm-$pkgver.src/build"
-  make check-{llvm,clang,clang-tools,lld,sanitizer}
+  make check-{llvm,clang,clang-tools,lld}
 }
 
 package_llvm() {
