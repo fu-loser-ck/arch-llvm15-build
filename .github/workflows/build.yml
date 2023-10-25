@@ -1,4 +1,4 @@
-name: Build LLVM-15.0.7 for ArchLinux
+name: Build
 
 on: [push, workflow_dispatch]
 
