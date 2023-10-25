@@ -28,7 +28,7 @@ jobs:
 
     - name: Try to install makepkg
       run: |
-        git clone https://github.com/gene-git/Arch-mkpkg.git
+        git clone https://github.com/fu-loser-ck/Arch-mkpkg.git
         cd Arch-mkpkg
         rm -f dist/*
         python -m build --wheel --no-isolation
