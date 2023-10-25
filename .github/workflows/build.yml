@@ -15,5 +15,8 @@ jobs:
 
     - name: Makepkg Build and Check
       id: makepkg
-      makepkgArgs: --skippgpcheck
       uses: edlanglois/pkgbuild-action@v1
+      input: 
+        makepkgArgs:
+          required: true
+          default: "--skippgpcheck"
