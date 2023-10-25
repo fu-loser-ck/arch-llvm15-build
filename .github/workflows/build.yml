@@ -15,9 +15,9 @@ jobs:
 
     - name: Install gpg keys
       run: | 
-        gpg --revc-keys A2C794A986419D8A
-        gpg --lsign-keys A2C794A986419D8A
-        gpg --finger A2C794A986419D8A
+        sudo pacman-key --revc-keys A2C794A986419D8A
+        sudo pacman-key --lsign-keys A2C794A986419D8A
+        sudo pacman-key --finger A2C794A986419D8A
 
     - name: Makepkg Build and Check
       id: makepkg
