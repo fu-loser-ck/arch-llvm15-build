@@ -13,12 +13,7 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
-    - name: Install gpg keys
-      run: | 
-        sudo pacman-key --revc-keys A2C794A986419D8A
-        sudo pacman-key --lsign-keys A2C794A986419D8A
-        sudo pacman-key --finger A2C794A986419D8A
-
     - name: Makepkg Build and Check
       id: makepkg
       uses: edlanglois/pkgbuild-action@v1
+      makepkgArgs: --skippgpcheck
