@@ -22,10 +22,6 @@ jobs:
         python -m pip install -U pip
         pip install -U build installer poetry setuptools wheel psutil recommonmark sphinx
 
-    - name: Print python version
-      run: |
-        /usr/bin/python -V
-
     - name: Try to install makepkg
       run: |
         git clone https://github.com/fu-loser-ck/Arch-mkpkg.git
@@ -33,8 +29,8 @@ jobs:
         rm -f dist/*
         python -m build --wheel --no-isolation
         root_dest="/"
-        ./scripts/do-install $root_dest
+        sudo ./scripts/do-install $root_dest
         cd ..
 
     - name: Make packages
-      run: makepkg
+      run: mkpkg
