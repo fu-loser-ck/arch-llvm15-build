@@ -15,5 +15,5 @@ jobs:
 
     - name: Makepkg Build and Check
       id: makepkg
-      uses: edlanglois/pkgbuild-action@v1
       makepkgArgs: --skippgpcheck
+      uses: edlanglois/pkgbuild-action@v1
