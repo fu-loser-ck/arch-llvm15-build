@@ -3,16 +3,19 @@ name: Build
 on: [push, workflow_dispatch]
 
 jobs:
-    build:
-  runs-on: ubuntu-latest
-      env:
-        CC: gcc-12
-        CXX: g++-12
-
-    - name: Test exist clang.
-      run: clang --version
+  build:
+    runs-on: ubuntu-latest
+  
+    env:
+      CC: gcc-12
+      CXX: g++-12
 
     steps:
+    - name: Find exist clang.
+      run: |
+        whereis clang
+        which is clang
+
     - uses: actions/checkout@v3
 
     - uses: actions/setup-python@v4
