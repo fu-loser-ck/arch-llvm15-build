@@ -1,7 +1,7 @@
 # Maintainer: Evangelos Foutras <evangelos@foutrelis.com>
 # Contributor: Jan "heftig" Steffens <jan.steffens@gmail.com>
 
-pkgname=('llvm' 'llvm-libs')
+pkgname=('llvm15' 'llvm15-libs')
 pkgver=15.0.7
 pkgrel=3
 arch=('x86_64')
@@ -67,9 +67,9 @@ check() {
   LD_LIBRARY_PATH=$PWD/lib ninja check
 }
 
-package_llvm() {
+package_llvm15() {
   pkgdesc="Compiler infrastructure"
-  depends=('llvm-libs' 'perl')
+  depends=('llvm15-libs' 'perl')
 
   cd llvm-$pkgver.src/build
 
@@ -97,7 +97,7 @@ package_llvm() {
   install -Dm644 ../LICENSE.TXT "$pkgdir/usr/local/share/licenses/$pkgname/LICENSE"
 }
 
-package_llvm-libs() {
+package_llvm15-libs() {
   pkgdesc="LLVM runtime libraries"
   depends=('gcc-libs' 'zlib' 'zstd' 'libffi' 'libedit' 'ncurses' 'libxml2')
 
